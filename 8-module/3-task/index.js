@@ -7,6 +7,27 @@ export default class Cart {
 
   addProduct(product) {
     // ваш код
+    let cartItem = {
+      product: product,
+      count: 0
+    }
+    console.log(product);
+    cartItem.product = product;
+    console.log(cartItem);
+    console.log(this.cartItems);
+
+    if(this.cartItems.indexOf(cartItem) == -1 ){
+      console.log(this.cartItems.indexOf(cartItem));
+      this.cartItems.push(cartItem);
+      console.log(this.cartItems);
+    }
+    if(this.cartItems.indexOf(cartItem) > -1){
+      console.log('hbhg')
+      console.log(this.cartItems.indexOf(cartItem));
+      cartItem.count += 1;
+      console.log(cartItem.count);
+      }
+
   }
 
   updateProductCount(productId, amount) {

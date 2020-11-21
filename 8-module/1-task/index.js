@@ -39,12 +39,11 @@ export default class CartIcon {
   }
 
   updatePosition() {
-    // ваш код ...
+    
     if (this.elem.offsetWidth>0){
     
     let isMobile = document.documentElement.clientWidth <= 767;
 
-// Если условие выполняется, обнуляем стили к исходным
     if (isMobile) {
       Object.assign(this.elem.style, {
         position: '',
@@ -54,8 +53,6 @@ export default class CartIcon {
     });
   }
   else {
-   // console.log(document.querySelector('.container'));
-    //let initialTopCoord = this.elem.getBoundingClientRect().top + window.pageYOffset;
     let leftIndent = Math.min(
       document.querySelector('.container').getBoundingClientRect().right + 20,
       document.documentElement.clientWidth - this.elem.offsetWidth - 10
